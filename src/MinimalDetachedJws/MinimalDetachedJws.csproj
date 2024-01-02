@@ -8,7 +8,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Detached JSON Web Signature (Minimal Implementation)</Title>
     <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
-    <Version>0.9.0.0</Version>
+    <Version>0.9.1.0</Version>
     <Copyright>Copyright 2024 Roel van der Steen</Copyright>
     <PackageProjectUrl>https://github.com/roelvandersteen/MinimalDetachedJws</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>

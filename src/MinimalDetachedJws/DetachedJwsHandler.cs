@@ -66,13 +66,8 @@ public sealed class DetachedJwsHandler
 
     private byte[] CreateSignatureBytes<T>(T payload)
     {
-        // Compute the SHA-256 hash of the payload
-        using var sha256 = SHA256.Create();
-        var hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(JsonSerializer.Serialize(payload)));
-
-        // Sign the hash using HMAC SHA-256
         using var hmac = new HMACSHA256(_secretKey);
-        return hmac.ComputeHash(hashBytes);
+        return hmac.ComputeHash(Encoding.UTF8.GetBytes(JsonSerializer.Serialize(payload)));
     }
 
     private static bool IsJwsHeaderValid(string encodedHeader)
